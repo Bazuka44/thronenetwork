@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    
+    
+    
+    
+    
+    
+
+   
+    
+
+    
+    
+
+}
+
+body {
+    margin: auto;
+    background-color: bisque;
+    font-size: 1.8rem;
+    line-height: 2.0;
+    
+    
+    
+    
+    
+   
+    
+    
+    
+}
+
+/* -------- Header Section --------> */
+
+
+
+/* -------- Hero Section --------> */
+.main-container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 8rem 15rem 8rem;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+#bcard {
+    border-radius: 1em;
+    width: 100%;
+}
+
+h1 {
+    margin: 1em 1em;
+}
+
+.maintxt {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* -------- Cards Section --------> */
+
+.cards-container {
+    
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    justify-content: space-around;
+    gap: 1em;
+    width: 100%;
+    margin: 1.5em 0 2em 0;
+    text-align: center;
+
+    
+    
+    
+   
+}
+
+
+.card {
+    
+    border: .1em solid #333;
+    box-sizing: border-box;
+    width: 10em;
+    /* max-width: 10em; */
+    height: 5em;
+    /* margin: 0; */
+    align-content: center;
+    padding: 0 1em;
+    
+    
+    
+
+
+
+}
+
+
+/* -------- Components Section --------> */
+
+button {
+    
+    color: yellowgreen;
+    background-color: black;
+    padding: .3em;
+    box-sizing: border-box;
+    height: 1.8em;
+    border-radius: .5em;
+    width: 13em;
+
+    
+    
+}
+
+.button:hover {
+    color: white;
+    transform: scale(1.2, 1.2);
+}
+
+
+
+
+.email-box {
+    /* display: inline-block; */
+    margin-top: 2em;
+    margin: 3rem 3rem;
+
+}
+
+
+
+
+.portfolio {
+    text-decoration: none;
+    color: blue;
+    margin-bottom: 2em;
+}
+
+.linked {
+    text-decoration: none;
+    color: blue;
+    margin-top: 1em;
+    margin-bottom: 1.5em
+}
+
+
+a {
+    display: block;
+    
+}
+
+a:hover {
+    color: yellowgreen;
+    /* transform: scale(1, 0.5); */
+}
+
+
+
+
+
+
+
+
+
+/* -------- Media Queries--------> */
+
+
+
+

@@ -1,42 +1,40 @@
+/* Fonts
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+ */
+
+
 * {
-    box-sizing: border-box;
+    
     margin: 0;
     padding: 0;
 }
 
 html {
     font-size: 62.5%;
-    display: flex;
+   display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
     
 
     
     
     
-    
-    
-    
-
-   
-    
-
-    
-    
-
 }
 
 body {
-    margin: auto;
-    background-color: bisque;
+    
+    background-color: #ffe4c4;
     font-size: 1.8rem;
     line-height: 2.0;
     
     
     
-    
-    
-   
+
     
     
     
@@ -52,15 +50,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 5rem 8rem 15rem 8rem;
-    
-    
-    
-    
-    
-    
-    
+    /* justify-content: center; */
+    max-width: 100rem;
+    /* padding: 5rem 8rem 15rem 8rem; */
+    margin: 5rem 0;
     
     
 }
@@ -68,7 +61,7 @@ body {
 
 #bcard {
     border-radius: 1em;
-    width: 100%;
+    max-width: 40rem;
 }
 
 h1 {
@@ -78,6 +71,8 @@ h1 {
 .maintxt {
     text-align: center;
     margin-bottom: 1em;
+    padding: 0 2.3em;
+    font-weight: bold;
 }
 
 /* -------- Cards Section --------> */
@@ -87,11 +82,12 @@ h1 {
     display: flex;
     flex-direction: row;
     font-size: 2rem;
-    justify-content: space-around;
-    gap: 1em;
-    width: 100%;
-    margin: 1.5em 0 2em 0;
+    justify-content: space-evenly;
+    gap: 3em;
+    padding: 0 2.3em;
+    margin: 1.5em 2.3em 3.5em 2.3em;
     text-align: center;
+    
 
     
     
@@ -104,18 +100,29 @@ h1 {
     
     border: .1em solid #333;
     box-sizing: border-box;
-    width: 10em;
-    /* max-width: 10em; */
-    height: 5em;
-    /* margin: 0; */
+    width: 21rem;
+    height: 15rem;
     align-content: center;
-    padding: 0 1em;
+    /* padding: 0 1em; */
+    /* background: #9f8e68 */
+    box-shadow: 1rem 2rem 3rem #333;
+    background-color: #413927;
+    /* font-family: monospace; */
     
     
-    
+}
 
+.card:hover {
+    transform: scale(1.1, 1.1);
+    background-color: #221e16;
+}
+.card p {
+    color: white;
+    font-size: 2.2rem;
+}
 
-
+.card p:hover {
+    color: yellowgreen;
 }
 
 
@@ -123,7 +130,7 @@ h1 {
 
 button {
     
-    color: yellowgreen;
+    color: white;
     background-color: black;
     padding: .3em;
     box-sizing: border-box;
@@ -136,8 +143,8 @@ button {
 }
 
 .button:hover {
-    color: white;
     transform: scale(1.2, 1.2);
+    color: yellowgreen;
 }
 
 
@@ -170,6 +177,7 @@ button {
 a {
     display: block;
     
+    
 }
 
 a:hover {
@@ -177,16 +185,97 @@ a:hover {
     /* transform: scale(1, 0.5); */
 }
 
+.ask {
+    max-width: 50ch;
+    text-align: center;
+    padding: 0 2.3em;
+}
+
+p {
+    text-align: center;
+}
 
 
+/* -------- Services Section--------> */
 
+.home-restoration img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    opacity: 78%;
 
+    
+}
 
+.home-restoration p {
+   position: relative;
+    z-index: 2;
+    top: -6em;
 
+}
 
+.services img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    opacity: 100%
+}
+
+.services p {
+    position: relative;
+    z-index: 2;
+    top: -5em;
+    
+}
+
+.learn-more img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.learn-more p {
+    position: relative;
+    z-index: 2;
+    top: -5em;
+}
 
 /* -------- Media Queries--------> */
 
 
 
+@media (max-width: 900px) {
+    .cards-container {
+    gap:1em;
+  }
 
+}
+
+@media (max-width: 818px) {
+    .cards-container {
+        flex-direction: column;
+        gap: 3em;
+        
+        
+        
+
+}
+.maintxt {
+    padding: 0 2em;
+}
+
+  #bcard {
+    border-radius: 1em;
+    max-width: 30rem;
+}
+  .main-container {
+    margin-top: 3rem;
+  }
+
+  
+
+}      
+        

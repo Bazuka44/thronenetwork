@@ -6,20 +6,37 @@
  */
 
 
+ /* -------- Color Styles --------> 
+ background-color: #030202;
+ primary-color: bisque;
+ accent-color: yellowgreen;
+ accent-color2: #413927;
+ Tertiary-color1: #1a1a2e;
+ Tertiary-color2: #333333;
+ orange-color: #e09200;
+ orange-color2: #b77e39;
+ 
+ 
+ 
+ 
+ */
+
+
+
+
+
 * {
     
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 62.5%;
-   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: 'Space Mono', monospace;
-    
+    margin-top: 8rem;
+   
 
     
     
@@ -28,52 +45,296 @@ html {
 
 body {
     
-    background-color: #ffe4c4;
+    background-color: #030202;
     font-size: 1.8rem;
     line-height: 2.0;
-    
-    
-    
+    margin: 0;
+    padding: 0;
+    width: 100%;
 
     
     
-    
 }
+
+
 
 /* -------- Header Section --------> */
 
 
 
 /* -------- Hero Section --------> */
+
+
+.clients-text {
+    grid-column: 1/1;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    gap: .8rem;
+    /* position: relative; */
+    
+    
+}
+
+.border-background {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    border: #1a1a2e solid .1rem;
+    padding: .2rem 1.6rem;
+    border-radius: 2rem;
+}
+
+.text-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #e09200;
+}
+
+
+
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    margin: 0 auto;
+    /* justify-items: center; */
+    gap: 1.3rem;
+    max-width: 120rem;
+    padding: 0 4rem;
+    position: relative;
+    /* column-gap: 8rem; */
+}
+
+
+
 .main-container {
     
     display: flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    max-width: 100rem;
+    max-width: 120rem;
     /* padding: 5rem 8rem 15rem 8rem; */
-    margin: 5rem 0;
+    margin: 5rem auto 25rem auto;
+    
+    color: bisque;
     
     
 }
 
+.bphoto {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-#bcard {
-    border-radius: 1em;
-    max-width: 40rem;
 }
 
-h1 {
-    margin: 1em 1em;
+
+.bcard {
+    
+    border-radius: 50%;
+    width: 17rem;
+    height: 17rem;
+    grid-row: 2/3;
+   
+   
+    
 }
 
+.hero-h1 {
+    color: bisque;
+    font-size: 2.5rem;
+    font-weight: 600;
+    grid-row: 2/3;                  
+}
+
+.starts-now {
+    background: linear-gradient(
+        to right,
+        #1a1a2e,
+        #e09200
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.clients-text {
+    color: white;
+}
+
+.welcome-section {
+    font-size: 4rem;
+    margin: 1em 0;
+    background: linear-gradient(
+        to right,
+        #1a1a2e,
+        #e09200
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    padding: 0 2.3em;
+    margin-top: 2.3em;
+    margin-bottom: 2.3em;
+    text-align: center;
+}
 .maintxt {
     text-align: center;
     margin-bottom: 1em;
     padding: 0 2.3em;
     font-weight: bold;
+    /* width: 100ch; */
 }
+
+/* -------- Animated Text Section --------> */
+ 
+.animated-text {
+    font-size: 2rem;
+    font-weight: 600;
+    grid-row: 3/4;
+    
+    
+    
+    
+}
+
+
+
+h1 {
+    color: bisque;
+    font-size: 2rem;
+    /* margin-bottom: 2rem; */
+    font-weight: 400;
+}
+
+
+
+
+
+.animated-text span {
+    position: relative;
+    display: inline-block;
+    line-height: 1.4;
+    
+    
+   
+   
+    
+}
+
+.animated-text span::before {
+    content: 'Better Ads';
+    color: yellowgreen;
+    animation: words 20s infinite;
+    
+}
+
+.animated-text span::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #030202;
+    border-left: 2px solid yellowgreen;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(20) infinite;
+   
+    
+   
+
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #9acd3200;
+    }
+
+    }
+
+    @keyframes words {
+        0%, 20% {
+            content: 'Better Ads';
+        }
+
+        21%, 40% {
+            content: 'Google Analytics';
+        }
+
+        41%, 60% {
+            content: 'Automations';
+        }
+
+        61%, 80% {
+            content: 'Web Development';
+        }
+
+        81%, 100% {
+            content: 'Results';
+        }
+
+
+
+
+}
+
+@keyframes typing {
+   10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 8px);
+    }
+}
+
+/* -------- Divider --------> */
+/* .svg-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+} */
+
+.divider {
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    overflow: hidden;
+    background: none;
+    /* margin-top: 32rem; */
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('images/layered-peaks-haikei3.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-position: center;
+}
+
+
+
 
 /* -------- Cards Section --------> */
 
@@ -83,9 +344,9 @@ h1 {
     flex-direction: row;
     font-size: 2rem;
     justify-content: space-evenly;
-    gap: 3em;
-    padding: 0 2.3em;
-    margin: 1.5em 2.3em 3.5em 2.3em;
+    gap: 6em;
+    /* padding: 0 2.3em; */
+    margin: 4em 0 5em 0;
     text-align: center;
     
 
@@ -98,7 +359,7 @@ h1 {
 
 .card {
     
-    border: .1em solid #333;
+    border: .1em solid #1a1a2e;
     box-sizing: border-box;
     width: 21rem;
     height: 15rem;
@@ -106,15 +367,18 @@ h1 {
     /* padding: 0 1em; */
     /* background: #9f8e68 */
     box-shadow: 1rem 2rem 3rem #333;
-    background-color: #413927;
+    background-color: yellowgreen;
     /* font-family: monospace; */
     
     
 }
 
+
+
 .card:hover {
     transform: scale(1.1, 1.1);
     background-color: #221e16;
+    border: .1em solid bisque;
 }
 .card p {
     color: white;
@@ -122,7 +386,7 @@ h1 {
 }
 
 .card p:hover {
-    color: yellowgreen;
+    color: bisque;
 }
 
 
@@ -131,12 +395,13 @@ h1 {
 button {
     
     color: white;
-    background-color: black;
+    background-color: #1a1a2e;
     padding: .3em;
     box-sizing: border-box;
     height: 1.8em;
     border-radius: .5em;
     width: 13em;
+    border: .1em solid #b77e39;
 
     
     
@@ -203,10 +468,12 @@ p {
     height: 100%;
     position: relative;
     z-index: 1;
-    opacity: 78%;
+    opacity: 85%;
 
     
 }
+
+
 
 .home-restoration p {
    position: relative;
@@ -220,7 +487,7 @@ p {
     height: 100%;
     position: relative;
     z-index: 1;
-    opacity: 100%
+    opacity: 85%;
 }
 
 .services p {
@@ -235,6 +502,7 @@ p {
     height: 100%;
     position: relative;
     z-index: 1;
+    opacity: 85%;
 }
 
 .learn-more p {
@@ -245,37 +513,95 @@ p {
 
 /* -------- Media Queries--------> */
 
+@media (max-width: 2000px) {
+    .divider {
+        /* margin-top: 25rem; */
+    }
 
+    .hero-h1 {
+        font-size: 3rem;
+    }
+
+    .animated-text {
+        font-size: 3rem;
+}
+
+}
 
 @media (max-width: 900px) {
     .cards-container {
-    gap:1em;
-  }
+        gap: 1em;
+    }
 
+    #bcard {
+        /* max-width: 25rem; */
+    }
+
+   /* .divider {
+    margin-top: 30rem;
+   } */
 }
 
 @media (max-width: 818px) {
     .cards-container {
         flex-direction: column;
         gap: 3em;
+    }
+
+    .maintxt {
+        padding: 0 2em;
+    }
+
+    #bcard {
+       position: static;
+    }
+
+   .hero-grid {
+        column-gap: 4rem;
+   }
+}
+
+@media (max-width: 600px) {
+    .hero-grid {
         
-        
-        
+    }
+    
+    .bcard {
+        width: 14rem;
+        height: 14rem;
+        }
+
+    .hero-h1 {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+   
+    span {
+        font-size: 1.5rem;
+    }
+
+    .border-background {
+        font-size: 1rem;
+    }
+
+    /* .divider {
+        margin-top: 31rem;
+    } */
+
+    
+}
+
+
+
+@media (max-width: 390px) {
+    /* Add small-screen overrides here if needed */
+    .hero-grid {
+        padding: 0 2rem;
+    }
+
+    
 
 }
-.maintxt {
-    padding: 0 2em;
-}
-
-  #bcard {
-    border-radius: 1em;
-    max-width: 30rem;
-}
-  .main-container {
-    margin-top: 3rem;
-  }
-
-  
-
-}      
-        

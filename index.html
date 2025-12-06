@@ -30,10 +30,18 @@
 
      </div>
      
-     <div class="bphoto">
-        <img id="bcard" class="bcard" src="bcard.jpg">
-     </div>
-    
+     <div class="person">
+      <div class="container">
+        <div class="container-inner">
+          <img class="circle" src="background-bcard1.png" alt="circle">
+          <img class="img person-bcard" src="person-bcard1.png" alt="person">
+        </div>
+      </div>
+
+
+      <div class="divider-person"></div>
+      <div class="name">Dan.Barraza</div>
+      <div class="title">Digital Creator</div>
     </div>
 
         </div>
@@ -47,30 +55,153 @@
     <h1 class="welcome-section">Welcome!</h1>
     <p class="maintxt">Helping local business owners automate tasks, free up time, book leads, and leverage AI Agents to drastically increase revenue without the headache.</p>
    
-    <div class="cards-container">
-        <div class="card home-restoration"><img src="https://cdn.pixabay.com/photo/2024/05/23/06/47/home-inspector-8782362_1280.jpg" alt="Home Restoration"><p>Home Restoration</p></div>
-        <div class="card services"><img src="ai-agents3.jpg"><p>Services</p></div>
-        <div class="card learn-more"><img src="https://cdn.pixabay.com/photo/2024/04/09/04/23/ai-generated-8684971_1280.jpg" alt="Services"><p>Learn More</p></div>
-    </div>
+    <section class="card-section">
+        
+
+        <div class="card-grid">
+            
+            <!-- Card 1: Home Restoration -->
+            <div class="card" data-tilt>
+                <div class="card-image-wrapper">
+                    <div class="card-overlay"></div>
+                    <!-- Placeholder image: Architecture/Construction -->
+                    <img src="https://cdn.pixabay.com/photo/2024/05/23/06/47/home-inspector-8782362_1280.jpg" alt="Home Restoration">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Home Restoration</h3>
+                        <p class="card-description">Automated project management for contractors. Custom SMS / callback & booking agents. </p>
+                    </div>
+                    <button class="card-btn">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Card 2: Systems (AI Focus) -->
+            <div class="card" data-tilt>
+                <div class="card-image-wrapper">
+                    <div class="card-overlay"></div>
+                    <!-- Placeholder image: Technology/AI -->
+                    <img src="ai-agents3.jpg" alt="AI Systems">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">AI Systems</h3>
+                        <p class="card-description">Deploy autonomous agents to handle leads, booking, and workflows 24/7.</p>
+                    </div>
+                    <button class="card-btn">Explore Systems</button>
+                </div>
+            </div>
+
+            <!-- Card 3: Learn More -->
+            <div class="card" data-tilt>
+                <div class="card-image-wrapper">
+                    <div class="card-overlay"></div>
+                    <!-- Placeholder image: Abstract/Future -->
+                    <img src="https://cdn.pixabay.com/photo/2024/04/09/04/23/ai-generated-8684971_1280.jpg" alt="Learn More">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">FAQs</h3>
+                        <p class="card-description">Find answers to common questions about our systems and solutions.</p>
+                    </div>
+                <button class="card-btn">View FAQs</button>
+                </div>
+            </div>
+
+            <div class="card" data-tilt>
+                <div class="card-image-wrapper">
+                    <div class="card-overlay"></div>
+                    <!-- Placeholder image: Abstract/Future -->
+                    <img src="images/restaurants-systems1.jpg" alt="Restaurants">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Restaurants</h3>
+                        <p class="card-description">Social Media, Email Collection, and Customer Engagement Solutions.</p>
+                    </div>
+                <button class="card-btn">View Details</button>
+                </div>
+            </div>
+
+
+            <div class="card" data-tilt>
+                <div class="card-image-wrapper">
+                    <div class="card-overlay"></div>
+                    <!-- Placeholder image: Abstract/Future -->
+                    <img src="images/rick-empie-sign.jpg" alt="Rick Empie Sign">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Retail</h3>
+                        <p class="card-description">AI customer support 24/7, increases reviews & customer interactions efficiently.</p>
+                    </div>
+                <button class="card-btn">View Details</button>
+                </div>
+            </div>
+
+
+            <div class="card" data-tilt>
+                <div class="card-image-wrapper">
+                    <div class="card-overlay"></div>
+                    <!-- Placeholder image: Abstract/Future -->
+                    <img src="images/credentials-linkedin1.png" alt="Learn More">
+                </div>  
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Credentials</h3>
+                        <p class="card-description">View my professional credentials and achievements on LinkedIn.</p>
+                    </div>
+                <button class="card-btn">View Credentials</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
             
     
     
 
     
 
-    <p>View My Credentials on</p>
-    <a class="linked" href="https://www.linkedin.com/in/daniel-barraza-52788b15a/" target="_blank">LinkedIn</a>
+    <!-- <p>View My Credentials on</p> -->
+    <!-- <a class="linked" href="https://www.linkedin.com/in/daniel-barraza-52788b15a/" target="_blank">LinkedIn</a> -->
     
 
     <h2>Ready To Future Proof Your Business?</h2>
-    <p class="ask">Book a Free Consultation. Happy To Answer Any & All Questions!</p>
+    <p class="ask">Let's discuss a custom roadmap for your business!</p>
     <!-- <a class="portfolio" href="work.html">View Portfolio</a> -->
-    <input class="email-box" type="text" placeholder="Enter email...">
+    <input class="email-input" type="email" placeholder="Enter email...">
 
-    <button class="button">Book Now</button>
+    <button class="main-btn btn-flux">Book Call</button>
 </div>
    
-   
+ <!-- Simple Script for 3D Tilt Effect -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; // Mouse position inside card
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                // Calculate rotation (max 15 degrees)
+                const rotateX = ((y - centerY) / centerY) * -10; 
+                const rotateY = ((x - centerX) / centerX) * 10;
+
+                // Apply transform
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            // Reset when mouse leaves
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
+        });
+    </script>  
 
 </body>
 </html>

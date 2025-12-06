@@ -107,7 +107,7 @@ body {
     gap: 1.3rem;
     max-width: 120rem;
     padding: 0 4rem;
-    position: relative;
+    /* position: relative; */
     /* column-gap: 8rem; */
 }
 
@@ -128,16 +128,17 @@ body {
     
 }
 
-.bphoto {
+
+/* .bphoto {
     grid-row: 2/3;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-}
+} */
 
 
-.bcard {
+/* .bcard {
     
     border-radius: 50%;
     width: 17rem;
@@ -146,7 +147,7 @@ body {
    
    
     
-}
+} */
 
 .hero-h1 {
     color: bisque;
@@ -198,6 +199,102 @@ h2 {
     font-weight: bold;
     /* width: 100ch; */
 }
+
+
+/*------------- Container Person ----------->*/
+.person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* width: 280px; */
+  grid-row: 2/3;
+  
+}
+.container {
+  border-radius: 50%;
+  height: 312px;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
+  /* grid-row: 2/3; */
+}
+.container:after {
+  /* background-color: #f2f2f2; */
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: 390px;
+  width: 100%;
+}
+.container:hover {
+  transform: scale(0.54);
+}
+.container-inner {
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+  position: relative;
+  transform-origin: 50%;
+  top: -200px;
+}
+
+.circle {
+  background-color: #fee7d3;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 380px;
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  width: 380px;
+}
+
+.img {
+  pointer-events: none;
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .img {
+  transform: translateY(0) scale(1.2);
+}
+
+.person-bcard {
+    right: 50px;
+  top: 175px;
+  width: 550px;
+  /* grid-row: 2/3; */
+}
+
+.divider-person {
+  background-color: #e09200;
+  height: 1px;
+  width: 160px;
+  /* grid-row: 2/3; */
+}
+.name {
+  color: #404245;
+  font-size: 36px;
+  font-weight: 600;
+  /* margin-top: 16px; */
+  text-align: center;
+}
+.title {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  /* margin-top: 4px; */
+}
+
+
+
+
+
 
 /* -------- Animated Text Section --------> */
  
@@ -300,19 +397,12 @@ h1 {
     }
 }
 
-/* -------- Divider --------> */
-/* .svg-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-} */
+
 
 .divider {
     position: relative;
     width: 100%;
-    height: 60rem;
+    height: 40rem;
     overflow: hidden;
     background: none;
     /* margin-top: 32rem; */
@@ -326,26 +416,194 @@ h1 {
     transform: translateX(-50%);
     width: 100%;
     height: 100%;
-    background-image: url('images/layered-peaks-haikei3.svg');
+    background-image: url('images/layered-peaks-haikeis1.svg');
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     background-position: center;
 }
 
+/* -------- NEW Cards Section --------> */
+.card-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 3rem 0 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #C6A983; /* Your site's gold/beige accent color */
+            margin-bottom: 4rem;
+            opacity: 0.9;
+        }
+
+        /* --- CARD GRID --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            perspective: 1000px; /* Essential for 3D effect */
+        }
+
+        /* --- CARD STYLES --- */
+        .card {
+            position: relative;
+            height: 45rem;
+            background: rgba(255, 255, 255, 0.03); /* Glass effect */
+            border: 1px solid rgba(198, 169, 131, 0.2); /* Subtle gold border */
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.1s ease; /* Fast transition for smooth tilt */
+            cursor: pointer;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+            transform-style: preserve-3d;
+        }
+
+        /* The Image Area */
+        .card-image-wrapper {
+            height: 60%;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Overlay to darken image slightly */
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, #050505 100%);
+            z-index: 1;
+        }
+
+        /* The Content Area */
+        .card-content {
+            height: 40%;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            transform: translateZ(20px); /* Lifts text off the card in 3D */
+            background: linear-gradient(to top, rgba(5,5,5,1), rgba(5,5,5,0.8));
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .card-description {
+            font-size: 1.5rem;
+            color: #aaa;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        /* Button Style */
+        .card-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            /* overflow-x: hidden; */
+            padding: .8rem 1.5rem;
+            background: transparent;
+            border: 1px solid #C6A983;
+            color: #C6A983;
+            font-family: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+        
+            
+        }
+
+        /* --- HOVER EFFECTS --- */
+        .card:hover {
+            border-color: #C6A983; /* Brighter border on hover */
+            box-shadow: 0 0 20px rgba(198, 169, 131, 0.3); /* Gold Glow */
+        }
+
+        .card:hover .card-image-wrapper img {
+            transform: scale(1.1); /* Zoom image */
+        }
+
+        .card:hover .card-btn {
+            background: #C6A983;
+            color: #000;
+        }
+
+        /* --- SHINE EFFECT (Optional shimmer) --- */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: skewX(-25deg);
+            transition: 0.5s;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .card:hover::before {
+            left: 125%;
+            transition: 0.7s;
+        }
+
+       
+
+
+
+
 
 
 
 /* -------- Cards Section --------> */
 
-.cards-container {
+/* .cards-container {
     
     display: flex;
     flex-direction: row;
     font-size: 2rem;
     justify-content: space-evenly;
     gap: 6em;
-    /* padding: 0 2.3em; */
+    
     margin: 4em 0 5em 0;
     text-align: center;
     
@@ -364,11 +622,10 @@ h1 {
     width: 21rem;
     height: 15rem;
     align-content: center;
-    /* padding: 0 1em; */
-    /* background: #9f8e68 */
+    
     box-shadow: 1rem 2rem 3rem #333;
     background-color: yellowgreen;
-    /* font-family: monospace; */
+    
     
     
 }
@@ -387,12 +644,66 @@ h1 {
 
 .card p:hover {
     color: bisque;
-}
+} */
 
 
 /* -------- Components Section --------> */
 
-button {
+/* IDEA 2: The "Flux" (Liquid Fill) */
+
+
+
+.main-btn {
+    padding: 1rem 2.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+
+.btn-flux {
+    background: transparent;
+    color: #c6a983;
+    border: 1px solid #c6a983;
+    overflow: hidden;
+}
+
+.btn-flux::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #c6a983;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+
+.btn-flux:hover {
+    color: #000;
+}
+
+.btn-flux:hover::before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* button {
     
     color: white;
     background-color: #1a1a2e;
@@ -410,17 +721,36 @@ button {
 .button:hover {
     transform: scale(1.2, 1.2);
     color: yellowgreen;
+} */
+
+
+
+
+.email-input {
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #333;
+    color: #fff;
+    font-family: inherit;
+    width: 30rem;
+    border-radius: 4px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: #c6a983;
 }
 
 
 
-
-.email-box {
-    /* display: inline-block; */
+/* .email-box {
+    
     margin-top: 2em;
     margin: 3rem 3rem;
 
-}
+} */
 
 
 
@@ -529,47 +859,66 @@ p {
 }
 
 @media (max-width: 900px) {
-    .cards-container {
+    /* .cards-container {
         gap: 1em;
     }
 
     #bcard {
-        /* max-width: 25rem; */
-    }
+        
+    } */
 
-   /* .divider {
-    margin-top: 30rem;
-   } */
+  
 }
 
-@media (max-width: 818px) {
-    .cards-container {
+@media (max-width: 835px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .animated-text {
+        font-size: 2.5rem;
+    }
+
+    /* .cards-container {
         flex-direction: column;
         gap: 3em;
-    }
+    } */
 
     .maintxt {
         padding: 0 2em;
     }
 
-    #bcard {
+    /* #bcard {
        position: static;
-    }
+    } */
 
    .hero-grid {
-        column-gap: 4rem;
+        column-gap: 2rem;
    }
 }
 
-@media (max-width: 600px) {
-    .hero-grid {
-        
-    }
+
+
+ /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .card {
+                height: 45rem;
+            }
+        }
+
+
+
+@media (max-width: 731px) {
     
-    .bcard {
+    
+    /* .bcard {
         width: 14rem;
         height: 14rem;
-        }
+        } */
 
     .hero-h1 {
         font-size: 2rem;
@@ -580,7 +929,7 @@ p {
     }
    
     span {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .border-background {
@@ -594,10 +943,56 @@ p {
     
 }
 
+@media (max-width: 682px) {
+    .hero-grid {
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 4rem;
+        text-align: center;
+    }
 
+
+    .person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* width: 280px; */
+  grid-row: 4/5;
+
+  
+}
+
+    .clients-text {
+        justify-content: center;
+    }
+
+    
+}
 
 @media (max-width: 390px) {
     /* Add small-screen overrides here if needed */
+
+    .hero-grid {
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 4rem;
+        text-align: center;
+    }
+
+     .person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* width: 280px; */
+  grid-row: 4/5;
+
+  
+}
+
+
+
     .hero-grid {
         padding: 0 2rem;
     }

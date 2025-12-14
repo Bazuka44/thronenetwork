@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- insert favicon and Open Graph tags later -->
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,10 +8,19 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Future-proof your business with AI-driven solutions. Specializing in automations, lead generation, and custom workflows for local businesses.">
     <title>Document</title>
 </head>
 <body>
+    
+
+    <!-- CUSTOM CURSOR ELEMENTS -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
         
+    <section class="hero-section">
+        <canvas id="hero-canvas"></canvas>
 
         <div class="hero-grid">
             <div class="clients-text">
@@ -25,8 +35,8 @@
 
             <div class="animated-text">
         
-        <h1>We Specialize in Delivering:</h1>
-        <span></span>
+        <h2>We Specialize in Delivering:</h2>
+        <span class="type-text"></span><span class="cursor-blink"></span>
 
      </div>
      
@@ -41,10 +51,11 @@
 
       <div class="divider-person"></div>
       <div class="name">Dan.Barraza</div>
-      <div class="title">Digital Creator</div>
+      <div class="title">Owner / Digital Creator</div>
     </div>
 
         </div>
+    </section>
 
     <!-- <div class="svg-container"> -->
         <div class="divider"></div>
@@ -52,8 +63,8 @@
 
     <div class="main-container">
     
-    <h1 class="welcome-section">Welcome!</h1>
-    <p class="maintxt">Helping local business owners automate tasks, free up time, book leads, and leverage AI Agents to drastically increase revenue without the headache.</p>
+    <h3 class="welcome-section">Scale Your Operations</h3>
+    <p class="maintxt">Helping local business owners scale their operations, automate tasks, free up time, book leads, and leverage AI Agents to drastically increase revenue without the headache.</p>
    
     <section class="card-section">
         
@@ -128,7 +139,7 @@
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
                     <!-- Placeholder image: Abstract/Future -->
-                    <img src="images/rick-empie-sign.jpg" alt="Rick Empie Sign">
+                    <img src="images/Rick-empie-store.jpg" alt="Rick Empie Sign">
                 </div>
                 <div class="card-content">
                     <div>
@@ -144,7 +155,7 @@
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
                     <!-- Placeholder image: Abstract/Future -->
-                    <img src="images/credentials-linkedin1.png" alt="Learn More">
+                    <img src="images/Credentials-card3.png" alt="Learn More">
                 </div>  
                 <div class="card-content">
                     <div>
@@ -167,7 +178,7 @@
     <!-- <a class="linked" href="https://www.linkedin.com/in/daniel-barraza-52788b15a/" target="_blank">LinkedIn</a> -->
     
 
-    <h2>Ready To Future Proof Your Business?</h2>
+    <h3 class="footer-h3">Ready To Future Proof Your Business?</h3>
     <p class="ask">Let's discuss a custom roadmap for your business!</p>
     <!-- <a class="portfolio" href="work.html">View Portfolio</a> -->
     <input class="email-input" type="email" placeholder="Enter email...">
@@ -175,8 +186,58 @@
     <button class="main-btn btn-flux">Book Call</button>
 </div>
    
- <!-- Simple Script for 3D Tilt Effect -->
+ 
     <script>
+
+        /* --- TYPEWRITER LOGIC (Restored for transparency) --- */
+        const typeTextElement = document.querySelector('.type-text');
+        const phrases = [
+            "AI Automations",
+            "Lead Generation",
+            "Custom Workflows",
+            "Better Ads",
+            "Google Analytics",
+            "Results"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function typeLoop() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                // Remove char
+                typeTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; 
+            } else {
+                // Add char
+                typeTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; 
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before typing new
+            }
+
+            setTimeout(typeLoop, typeSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', typeLoop);
+
+
+
+
+        /* --- 3D TILT EFFECT ON CARDS --- */
+
         const cards = document.querySelectorAll('.card');
 
         cards.forEach(card => {
@@ -201,6 +262,156 @@
                 card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
             });
         });
+
+
+        /* --- ADVANCED CURSOR LOGIC --- */
+        const cursorDot = document.querySelector('[data-cursor-dot]');
+        const cursorOutline = document.querySelector('[data-cursor-outline]');
+        
+        // Mouse positions
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Outline positions (for trailing effect)
+        let outlineX = 0;
+        let outlineY = 0;
+
+        // Check if device is fine pointer (mouse)
+        const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+
+        if (isFinePointer) {
+            // Track mouse movement
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                // Instant update for the dot
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+            });
+
+            // Interactive element hover detection
+            const interactables = document.querySelectorAll('a, button, input, .card');
+            
+            interactables.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    document.body.classList.add('hovering');
+                });
+                el.addEventListener('mouseleave', () => {
+                    document.body.classList.remove('hovering');
+                });
+            });
+
+            // Smooth animation loop for the outline
+            const animateCursor = () => {
+                // Linear interpolation (lerp) for smooth trailing
+                // The 0.15 factor determines the speed (lower = slower lag)
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+
+                cursorOutline.style.left = `${outlineX}px`;
+                cursorOutline.style.top = `${outlineY}px`;
+
+                requestAnimationFrame(animateCursor);
+            }
+            
+            animateCursor();
+        }
+        
+
+        /* --- NEURAL NETWORK BACKGROUND ANIMATION --- */
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let particles = [];
+        const particleCount = 60; // Number of dots
+        const connectionDistance = 150; // Distance to draw lines
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = document.querySelector('.hero-section').offsetHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5; // Slow horizontal speed
+                this.vy = (Math.random() - 0.5) * 0.5; // Slow vertical speed
+                this.size = Math.random() * 2 + 1;
+                // Randomly gold or teal
+                this.color = Math.random() > 0.5 ? '#C6A983' : '#264047'; 
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off edges
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                // Draw connections
+                for (let j = i; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(38, 64, 71, ${1 - distance / connectionDistance})`; // Fading Teal
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+
+        // Initialize Canvas
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+        
+        // Start after slight delay to ensure layout is ready
+        setTimeout(() => {
+            resizeCanvas();
+            initParticles();
+            animateCanvas();
+        }, 100);
+
+
+
+
+
+
     </script>  
 
 </body>

@@ -15,6 +15,11 @@
  Tertiary-color2: #333333;
  orange-color: #e09200;
  orange-color2: #b77e39;
+ teal-color: #264047;
+ teal-color2: #112226;
+ light-color: #8899a6;
+ light-color2: #C6A983;
+ 
  
  
  
@@ -51,10 +56,62 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    cursor: none;
+    overflow-x: hidden;
+
+    /* background: radial-gradient(circle at 50% 0%, #112226 0%, #030202 70%);
+    background-attachment: fixed;
+     */
 
     
     
 }
+
+/* --------- Global Styles --------> */
+/* --- CUSTOM CURSOR STYLES --- */
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none; /* Allows clicking through */
+            display: none; /* Hidden by default until JS runs */
+        }
+        
+        @media (hover: hover) and (pointer: fine) {
+            .cursor-dot, .cursor-outline {
+                display: block;
+            }
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #C6A983;
+            box-shadow: 0 0 10px #C6A983;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(198, 169, 131, 0.5);
+            transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        /* Hover State for Cursor (Active on interactive elements) */
+        body.hovering .cursor-outline {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(198, 169, 131, 0.05);
+            border-color: #C6A983;
+            mix-blend-mode: difference; /* Cool effect over images */
+        }
+        
+        /* Hide dot when hovering for cleaner look (optional, keeping both for now) */
+        /* body.hovering .cursor-dot { opacity: 0; } */
 
 
 
@@ -63,6 +120,19 @@ body {
 
 
 /* -------- Hero Section --------> */
+
+
+/* Background Canvas Animation */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Behind the content */
+            opacity: 0.6; /* Subtle effect */
+            pointer-events: none; /* Let clicks pass through */
+        }
 
 
 .clients-text {
@@ -82,7 +152,7 @@ body {
     display: flex;
     align-items: center;
     gap: .8rem;
-    border: #1a1a2e solid .1rem;
+    border: #264047 solid .1rem;
     padding: .2rem 1.6rem;
     border-radius: 2rem;
 }
@@ -91,7 +161,7 @@ body {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: #e09200;
+    background-color: yellowgreen;
 }
 
 
@@ -123,7 +193,7 @@ body {
     /* padding: 5rem 8rem 15rem 8rem; */
     margin: 5rem auto 25rem auto;
     
-    color: bisque;
+    color: #8899a6;
     
     
 }
@@ -150,7 +220,7 @@ body {
 } */
 
 .hero-h1 {
-    color: bisque;
+    color: #8899a6;
     font-size: 2.5rem;
     font-weight: 600;
     grid-row: 2/3;                  
@@ -159,8 +229,10 @@ body {
 .starts-now {
     background: linear-gradient(
         to right,
-        #1a1a2e,
+        #8899a6,
         #e09200
+       
+        
     );
 
     -webkit-background-clip: text;
@@ -173,12 +245,13 @@ body {
 }
 
 .welcome-section {
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin: 1em 0;
     background: linear-gradient(
         to right,
-        #1a1a2e,
+        #8899a6,
         #e09200
+        
     );
 
     -webkit-background-clip: text;
@@ -186,18 +259,21 @@ body {
     color: transparent;
 }
 
-h2 {
+/* h2 {
     padding: 0 2.3em;
     margin-top: 2.3em;
     margin-bottom: 2.3em;
     text-align: center;
-}
+} */
+
+
 .maintxt {
     text-align: center;
     margin-bottom: 1em;
     padding: 0 2.3em;
     font-weight: bold;
     /* width: 100ch; */
+    color: #aaa
 }
 
 
@@ -277,14 +353,14 @@ h2 {
   /* grid-row: 2/3; */
 }
 .name {
-  color: #404245;
+  color: #8899a6;
   font-size: 36px;
   font-weight: 600;
   /* margin-top: 16px; */
   text-align: center;
 }
 .title {
-  color: #6e6e6e;
+  color: #e09200;
   font-family: arial;
   font-size: 14px;
   font-style: italic;
@@ -310,17 +386,43 @@ h2 {
 
 
 
-h1 {
-    color: bisque;
+h2 {
+    color: #aaa;
     font-size: 2rem;
     /* margin-bottom: 2rem; */
     font-weight: 400;
 }
 
 
+ .type-text {
+            background: linear-gradient(to right, #8899a6, #e09200); /* Gradient applied here */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            font-size: 2.2rem; 
+        }
+
+        .cursor-blink {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: #C6A983;
+            margin-left: 5px;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
 
 
 
+
+
+/* 
 .animated-text span {
     position: relative;
     display: inline-block;
@@ -332,12 +434,18 @@ h1 {
     
 }
 
+
+
+
 .animated-text span::before {
     content: 'Better Ads';
-    color: yellowgreen;
     animation: words 20s infinite;
-    
+    background-image: linear-gradient(to right, #8899a6, #e09200);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
+
 
 .animated-text span::after {
     content: '';
@@ -375,7 +483,7 @@ h1 {
         }
 
         61%, 80% {
-            content: 'Web Development';
+            content: 'Custom Workflows';
         }
 
         81%, 100% {
@@ -396,6 +504,7 @@ h1 {
         width: calc(100% + 8px);
     }
 }
+     */
 
 
 
@@ -419,7 +528,7 @@ h1 {
     background-image: url('images/layered-peaks-haikeis1.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
+    z-index: -2;
     background-position: center;
 }
 
@@ -429,7 +538,7 @@ h1 {
             max-width: 1200px;
             padding: 4rem 2rem;
             text-align: center;
-            margin: 3rem 0 4rem 0;
+            margin: 3rem 0 12rem 0;
         }
 
         .section-title {
@@ -784,6 +893,7 @@ a:hover {
     max-width: 50ch;
     text-align: center;
     padding: 0 2.3em;
+    color: #aaa;
 }
 
 p {
@@ -791,7 +901,7 @@ p {
 }
 
 
-/* -------- Services Section--------> */
+/* -------- Systems Section--------> */
 
 .home-restoration img {
     width: 100%;
@@ -840,6 +950,30 @@ p {
     z-index: 2;
     top: -5em;
 }
+
+
+
+
+/* -------- Footer Section--------> */
+.footer-h3 {
+    background: linear-gradient(
+        to right,
+        #8899a6,
+        #e09200
+       
+        
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
 
 /* -------- Media Queries--------> */
 
@@ -929,7 +1063,7 @@ p {
     }
    
     span {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
     }
 
     .border-background {
@@ -948,7 +1082,7 @@ p {
         /* display: grid; */
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
-        row-gap: 4rem;
+        row-gap: 3.5rem;
         text-align: center;
     }
 
@@ -965,10 +1099,23 @@ p {
 
     .clients-text {
         justify-content: center;
+        font-size: 1.5rem;
     }
 
     
 }
+
+
+@media (max-width: 559px) {
+    .footer-h3 {
+        font-size: 2rem;
+    }
+
+    .ask {
+        font-size: 1.6rem;
+    }
+}
+
 
 @media (max-width: 390px) {
     /* Add small-screen overrides here if needed */
@@ -998,5 +1145,4 @@ p {
     }
 
     
-
 }

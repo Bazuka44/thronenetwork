@@ -54,7 +54,16 @@
       <div class="title">Owner / Digital Creator</div>
     </div>
 
+    <div class="social-icons">
+           <img src="images/network.socials.linkedin.png">
+           <img src="images/network.socials.facebook.png">
+           <img src="images/network.socials.instagram.png">
+           <img src="images/socialxlogo.png">
         </div>
+
+        </div>
+
+        
     </section>
 
     <!-- <div class="svg-container"> -->
@@ -64,7 +73,7 @@
     <div class="main-container">
     
     <h3 class="welcome-section">Scale Your Operations</h3>
-    <p class="maintxt">Helping local business owners scale their operations, automate tasks, free up time, book leads, and leverage AI Agents to drastically increase revenue without the headache.</p>
+    <p class="maintxt">Helping local business owners scale their operations, automate tasks, free up time, book leads, and leverage AI Agents to increase revenue efficiently without the headache.</p>
    
     <section class="card-section">
         
@@ -169,7 +178,75 @@
         </div>
     </section>
             
-    
+    <!-- FAQ SECTION -->
+        <section class="faq-section">
+            <div class="faq-header">
+                <p class="faq-subtitle">Got Questions?</p>
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is an AI Automation Agent?</h4>
+                        <div class="faq-toggle"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>An AI agent is an autonomous system that handles repetitive tasks like lead qualification, appointment booking, and customer support without human intervention, saving you hours every week.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does setup take?</h4>
+                        <div class="faq-toggle"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most basic workflows and AI agents can be deployed within 7 to 14 days, depending on the complexity of your current business systems.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Will it work with my existing tools?</h4>
+                        <div class="faq-toggle"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We specialize in connecting modern AI platforms with your existing CRM, Email, and Calendar systems via custom API integrations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is this suitable for small businesses?</h4>
+                        <div class="faq-toggle"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Small businesses often benefit the most because AI allows you to operate like a much larger team without the overhead of additional staff.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer ongoing support?</h4>
+                        <div class="faq-toggle"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide full monitoring and maintenance for all deployed systems to ensure your AI agents continue performing optimally as your business grows.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What results should I expect?</h4>
+                        <div class="faq-toggle"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Clients typically see a 40% reduction in response times and a significant increase in booked appointments within the first month of implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     
 
     
@@ -408,11 +485,24 @@
         }, 100);
 
 
+          /* --- FAQ LOGIC --- */
 
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
 
 
 
     </script>  
+
+   
 
 </body>
 </html>

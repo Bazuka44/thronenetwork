@@ -532,6 +532,48 @@ h2 {
     background-position: center;
 }
 
+/* ------------ Social Icons Section --------> */
+
+
+
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    grid-column: 2 / 3; /* Keep it in the same column as the person */
+    grid-row: 3 / 4;    /* Move it to the row directly below the person */
+    gap: 1.5rem;
+    
+
+    /* margin-top: 2rem; */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(5%) brightness(100%);
+    color: #8899a6;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%) brightness(150%);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 /* -------- NEW Cards Section --------> */
 .card-section {
             width: 100%;
@@ -646,7 +688,7 @@ h2 {
             color: #C6A983;
             font-family: inherit;
             font-weight: bold;
-            cursor: pointer;
+            cursor: none;
             transition: 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -659,6 +701,7 @@ h2 {
         .card:hover {
             border-color: #C6A983; /* Brighter border on hover */
             box-shadow: 0 0 20px rgba(198, 169, 131, 0.3); /* Gold Glow */
+            cursor: none;
         }
 
         .card:hover .card-image-wrapper img {
@@ -668,6 +711,7 @@ h2 {
         .card:hover .card-btn {
             background: #C6A983;
             color: #000;
+            cursor: none;
         }
 
         /* --- SHINE EFFECT (Optional shimmer) --- */
@@ -769,7 +813,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: none;
     border: none;
     border: none;
     position: relative;
@@ -884,10 +928,10 @@ a {
     
 }
 
-a:hover {
+/* a:hover {
     color: yellowgreen;
-    /* transform: scale(1, 0.5); */
-}
+    transform: scale(1, 0.5);
+} */
 
 .ask {
     max-width: 50ch;
@@ -951,11 +995,120 @@ p {
     top: -5em;
 }
 
+/* -------- FAQ Section--------> */
 
+
+        .faq-section {
+            width: 100%;
+            max-width: 900px;
+            margin: 5rem auto 10rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .faq-title {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .faq-subtitle {
+            color: #e09200;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(136, 153, 166, 0.1);
+        }
+
+        .faq-question {
+            background-color: #111111;
+            padding: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #1a1a1a;
+        }
+
+        .faq-question h4 {
+            color: #8899a6;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .faq-toggle {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+
+        .faq-toggle::before,
+        .faq-toggle::after {
+            content: '';
+            position: absolute;
+            background-color: #e09200;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-toggle::before {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+        }
+
+        .faq-toggle::after {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .faq-item.active .faq-toggle::before {
+            opacity: 0;
+            transform: translateX(-50%) scaleY(0);
+        }
+
+        .faq-answer {
+            background-color: #080808;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease;
+            padding: 0 2.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 2.5rem;
+        }
+
+        .faq-answer p {
+            color: #aaa;
+            text-align: left;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
 
 
 /* -------- Footer Section--------> */
 .footer-h3 {
+    margin-top: 5rem;
     background: linear-gradient(
         to right,
         #8899a6,
@@ -1081,7 +1234,7 @@ p {
     .hero-grid {
         /* display: grid; */
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
         row-gap: 3.5rem;
         text-align: center;
     }
@@ -1103,6 +1256,11 @@ p {
     }
 
     
+    .social-icons {
+       grid-column: 1/2;
+       grid-row: 5/6;
+       margin-top: 3rem;
+    }
 }
 
 

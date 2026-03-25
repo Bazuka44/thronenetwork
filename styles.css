@@ -1315,6 +1315,20 @@ p {
         text-align: center;
     }
 
+     .container {
+        position: relative;
+        transform: scale(0.38);
+        margin: -8rem 0;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 210px;
+    }
+
 
     .person {
   align-items: center;
@@ -1330,6 +1344,9 @@ p {
 
 .person-bcard {
     width: min(550px, 80vw);
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
   
 }

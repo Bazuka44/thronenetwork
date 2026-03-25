@@ -520,17 +520,30 @@ h2 {
      */
 
 
-
 .divider {
     position: relative;
     width: 100%;
     height: 40rem;
     overflow: hidden;
-    background: none;
-    /* margin-top: 32rem; */
+    background-image: url('images/layered-peaks-haikeis1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-.divider::before {
+
+
+
+/* .divider {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    background: none;
+     margin-top: 32rem;
+}  */
+
+/* .divider::before {
     content: '';
     position: absolute;
     top: 0;
@@ -543,7 +556,7 @@ h2 {
     background-size: cover;
     z-index: -2;
     background-position: center;
-}
+} */
 
 /* ------------ Social Icons Section --------> */
 

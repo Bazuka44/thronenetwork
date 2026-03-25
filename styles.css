@@ -190,7 +190,8 @@ body.restaurants-page .home-restoration-page .retail-page {
     /* justify-items: center; */
     gap: 1.3rem;
     max-width: 120rem;
-    padding: 0 4rem;
+    /* padding: 0 4rem; */
+    padding: 8rem 4rem 0 4rem;
     /* position: relative; */
     /* column-gap: 8rem; */
 }

@@ -1350,12 +1350,21 @@ p {
         width: 100%;
     }
 
+    .person-bcard {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
     .container {
-        transform: scale(0.32);
+        transform: scale(0.42);
         transform-origin: center top;
-        margin: 3rem auto .3rem auto;
+        margin: 4rem auto auto auto;
         left: 0;
         right: 0;
+        transition: none;
+        /* pointer-events: none; */
     }
 
     /* Disable the pop effect on touch */
@@ -1363,9 +1372,9 @@ p {
         transform: scale(0.32);
     }
 
-    .container-inner {
+    /* .container-inner {
         top: -150px;
-    }
+    } */
 
     .social-icons {
         grid-column: 1/2;

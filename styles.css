@@ -1344,38 +1344,20 @@ p {
     }
 
     .container {
-        width: 190px;
-        height: 190px;
-        border-radius: 50%;
-        overflow: hidden;
-        transform: none;
-        margin: 0 auto;
-        position: relative;
+        transform: scale(0.32);
+        transform-origin: center top;
+        margin: -13rem auto -10rem auto;
+        left: 0;
+        right: 0;
     }
 
+    /* Disable the pop effect on touch */
     .container:active {
-        transform: none;
+        transform: scale(0.32);
     }
 
     .container-inner {
-        position: absolute;
-        top: -60px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 380px;
-    }
-
-    .circle {
-        display: none;
-    }
-
-    .person-bcard {
-        position: relative;
-        width: 260px;
-        left: auto;
-        right: auto;
-        top: auto;
-        transform: none;
+        top: -220px;
     }
 
     .social-icons {

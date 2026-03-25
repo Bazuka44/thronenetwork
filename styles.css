@@ -40,7 +40,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Space Mono', monospace;
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
     scroll-behavior: smooth;     /* Makes the scroll nice and smooth */
 
     
@@ -182,7 +182,8 @@ body.restaurants-page .home-restoration-page .retail-page {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    /* grid-template-columns: auto auto; */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     align-items: center;
     margin: 0 auto;
@@ -305,7 +306,8 @@ body.restaurants-page .home-restoration-page .retail-page {
   -webkit-tap-highlight-color: transparent;
   transform: scale(0.48);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 400px;
+  /* width: 400px; */
+  width: min(400px, 90vw);
   /* grid-row: 2/3; */
 }
 .container:after {

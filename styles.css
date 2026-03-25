@@ -301,12 +301,12 @@ body.restaurants-page .home-restoration-page .retail-page {
 
 }
 
-.person {
+/* .person {
   align-items: center;
   display: flex;
   flex-direction: column;
   grid-row: 2/3;
-}
+} */
 
 .container {
   border-radius: 50%;
@@ -422,6 +422,7 @@ h2 {
     font-size: 2rem;
     /* margin-bottom: 2rem; */
     font-weight: 400;
+    margin-top: 10rem;
 }
 
 
@@ -1232,6 +1233,8 @@ p {
         font-size: 3rem;
 }
 
+
+
 }
 
 @media (max-width: 900px) {
@@ -1367,7 +1370,7 @@ p {
    
 
     .divider {
-        top: 80rem;
+        top: 90rem;
     }
 
      /* .person-bcard {
@@ -1488,7 +1491,11 @@ p {
     }
 
     .main-container {
-        margin-top: 28rem;
+        margin-top: 26rem;
+    }
+
+    .h2 {
+        margin-top: 5rem;
     }
 
      

@@ -1344,40 +1344,16 @@ p {
     }
 
     .container {
-        position: relative;
-        width: min(400px, 90vw);
-        height: 312px;
         transform: scale(0.48);
         transform-origin: center top;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        margin: -9rem auto -8rem auto;
+        margin: -10rem auto -6rem auto;
+        left: 0;
+        right: 0;
     }
 
+    /* Disable the pop effect on touch */
     .container:active {
-        transform: scale(0.54);
-        transform-origin: center top;
-    }
-
-    .container-inner {
-        position: relative;
-        transform-origin: 50%;
-        top: -200px;
-    }
-
-    .circle {
-        width: 380px;
-        height: 380px;
-        left: 50%;
-        top: 210px;
-        transform: translateX(-50%);
-    }
-
-    .person-bcard {
-        width: 550px;
-        right: auto;
-        left: 50%;
-        top: 175px;
-        transform: translateX(-50%);
+        transform: scale(0.48);
     }
 
     .social-icons {

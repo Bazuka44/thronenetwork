@@ -1344,16 +1344,20 @@ p {
     }
 
     .container {
-        transform: scale(0.48);
+        transform: scale(0.32);
         transform-origin: center top;
-        margin: -10rem auto -6rem auto;
+        margin: -13rem auto -10rem auto;
         left: 0;
         right: 0;
     }
 
     /* Disable the pop effect on touch */
     .container:active {
-        transform: scale(0.48);
+        transform: scale(0.32);
+    }
+
+    .container-inner {
+        top: -220px;
     }
 
     .social-icons {

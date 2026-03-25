@@ -1353,7 +1353,7 @@ p {
     .container {
         transform: scale(0.32);
         transform-origin: center top;
-        margin: -9rem auto -6rem auto;
+        margin: 3rem auto .3rem auto;
         left: 0;
         right: 0;
     }
@@ -1364,7 +1364,7 @@ p {
     }
 
     .container-inner {
-        top: -200px;
+        top: -150px;
     }
 
     .social-icons {

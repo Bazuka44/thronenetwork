@@ -55,10 +55,10 @@
     </div>
 
     <div class="social-icons">
-           <img src="images/network.socials.linkedin.png">
-           <img src="images/network.socials.facebook.png">
-           <img src="images/network.socials.instagram.png">
-           <img src="images/socialxlogo.png">
+           <a href="https://www.linkedin.com/in/daniel-barraza-52788b15a/" target="_blank"><img src="images/network.socials.linkedin.png"></a>
+           <a href="https://www.facebook.com/daniel.barraza.7737769" target="_blank"><img src="images/network.socials.facebook.png"></a>
+           <a href="https://www.instagram.com/dan.barraza/" target="_blank"><img src="images/network.socials.instagram.png"></a>
+           <a href="https://x.com/danbarraza241" target="_blank"><img src="images/socialxlogo.png"></a>
         </div>
 
         </div>
@@ -81,7 +81,8 @@
         <div class="card-grid">
             
             <!-- Card 1: Home Restoration -->
-            <div class="card" data-tilt>
+             <a href="home-restoration-page.html" class="card-link">
+                <div class="card" data-tilt>
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
                     <!-- Placeholder image: Architecture/Construction -->
@@ -95,6 +96,9 @@
                     <button class="card-btn">Learn More</button>
                 </div>
             </div>
+             </a>
+            
+            
 
             <!-- Card 2: Systems (AI Focus) -->
             <div class="card" data-tilt>
@@ -113,6 +117,9 @@
             </div>
 
             <!-- Card 3: Learn More -->
+            
+
+            <a href="#faq-section" class="faq-card">
             <div class="card" data-tilt>
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
@@ -128,7 +135,10 @@
                 </div>
             </div>
 
-            <div class="card" data-tilt>
+            </a>
+
+            <a href="restaurants-page.html" class="card-link"> 
+                <div class="card" data-tilt>
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
                     <!-- Placeholder image: Abstract/Future -->
@@ -142,8 +152,10 @@
                 <button class="card-btn">View Details</button>
                 </div>
             </div>
+            </a>
 
 
+           <a href="retail-page.html" class="card-link"> 
             <div class="card" data-tilt>
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
@@ -159,8 +171,11 @@
                 </div>
             </div>
 
+            </a>
 
-            <div class="card" data-tilt>
+
+            <a href="https://www.linkedin.com/in/daniel-barraza-52788b15a/" target="_blank" class="card-link">
+                <div class="card" data-tilt>
                 <div class="card-image-wrapper">
                     <div class="card-overlay"></div>
                     <!-- Placeholder image: Abstract/Future -->
@@ -174,12 +189,13 @@
                 <button class="card-btn">View Credentials</button>
                 </div>
             </div>
+            </a>
 
         </div>
     </section>
             
     <!-- FAQ SECTION -->
-        <section class="faq-section">
+        <section class="faq-section" id="faq-section">
             <div class="faq-header">
                 <p class="faq-subtitle">Got Questions?</p>
                 <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -258,13 +274,48 @@
     <h3 class="footer-h3">Ready To Future Proof Your Business?</h3>
     <p class="ask">Let's discuss a custom roadmap for your business!</p>
     <!-- <a class="portfolio" href="work.html">View Portfolio</a> -->
-    <input class="email-input" type="email" placeholder="Enter email...">
-
-    <button class="main-btn btn-flux">Book Call</button>
+    <form  id="book-call-form" action="https://formspree.io/f/mgopwzjy" method="POST" style="display:flex;flex-direction:column;align-items:center;gap:12px;"> 
+    <input class="email-input" type="email" placeholder="Enter email..." required >
+    <button class="main-btn btn-flux" type="submit">Book Call</button>
+    </form>
+    
 </div>
    
  
     <script>
+
+
+        /* --- Formspree AJAX SUBMISSION --- */
+    const form = document.getElementById('book-call-form');
+    form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const data = Object.fromEntries(new FormData(form));
+    
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.innerHTML = `
+        <p style="color:#c9a84c;font-family:monospace;
+        font-size:16px;text-align:center;letter-spacing:1px;">
+          ✓ Got it — we'll be in touch shortly.
+        </p>`;
+    } else {
+      form.innerHTML = `
+        <p style="color:#ff4444;font-family:monospace;
+        font-size:16px;text-align:center;">
+          Something went wrong. Try emailing us directly.
+        </p>`;
+    }
+    });
+
 
         /* --- TYPEWRITER LOGIC (Restored for transparency) --- */
         const typeTextElement = document.querySelector('.type-text');

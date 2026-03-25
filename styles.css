@@ -334,12 +334,14 @@ body.restaurants-page .home-restoration-page .retail-page {
   background-color: #fee7d3;
   border-radius: 50%;
   cursor: pointer;
-  height: 380px;
+  /* height: 380px; */
   left: 10px;
   pointer-events: none;
   position: absolute;
   top: 210px;
-  width: 380px;
+  /* width: 380px; */
+  height: min(380px, 75vw);
+  width: min(380px, 75vw);
 }
 
 .img {
@@ -357,7 +359,8 @@ body.restaurants-page .home-restoration-page .retail-page {
 .person-bcard {
     right: 50px;
   top: 175px;
-  width: 550px;
+  /* width: 550px; */
+  width: min(550px, 80vw);
   /* grid-row: 2/3; */
 }
 

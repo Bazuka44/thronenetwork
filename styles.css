@@ -1313,12 +1313,19 @@ p {
         grid-template-rows: auto auto auto auto auto;
         row-gap: 3.5rem;
         text-align: center;
+        padding: 8rem 2rem 0 2rem;
     }
 
      .container {
         position: relative;
-        transform: scale(0.38);
-        margin: -8rem 0;
+        transform: scale(0.52);
+        transform-origin: center top;
+        margin: -5rem auto;
+    }
+
+    .container:hover {
+        transform: scale(0.56);
+        transform-origin: center top;
     }
 
     .circle {

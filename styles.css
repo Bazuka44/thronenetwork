@@ -1307,8 +1307,8 @@ p {
 }
 
 @media (max-width: 682px) {
+
     .hero-grid {
-        /* display: grid; */
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto;
         row-gap: 3.5rem;
@@ -1316,11 +1316,30 @@ p {
         padding: 8rem 2rem 0 2rem;
     }
 
-     .container {
+    .hero-h1 {
+        text-align: center;
+        width: 100%;
+        padding: 0 1.5rem;
+        font-size: 2.2rem;
+    }
+
+    .animated-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .person {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        grid-row: 4/5;
+    }
+
+    .container {
         position: relative;
         transform: scale(0.52);
         transform-origin: center top;
-        margin: -5rem auto;
+        margin: -3rem auto 0 auto;
     }
 
     .container:hover {
@@ -1336,38 +1355,22 @@ p {
         top: 210px;
     }
 
-
-    .person {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  /* width: 280px; */
-  grid-row: 4/5;
-
-  .container {
-    transform: scale(0.38);
-    margin: -6rem 0;
-}
-
-.person-bcard {
-    width: min(550px, 80vw);
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-}
-  
-}
+    .person-bcard {
+        width: min(550px, 80vw);
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     .clients-text {
         justify-content: center;
         font-size: 1.5rem;
     }
 
-    
     .social-icons {
-       grid-column: 1/2;
-       grid-row: 5/6;
-       margin-top: 3rem;
+        grid-column: 1/2;
+        grid-row: 5/6;
+        margin-top: 3rem;
     }
 }
 

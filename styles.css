@@ -422,7 +422,7 @@ h2 {
     font-size: 2rem;
     /* margin-bottom: 2rem; */
     font-weight: 400;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
 }
 
 
@@ -1370,9 +1370,12 @@ p {
    
 
     .divider {
-        top: 93rem;
+        top: 88rem;
     }
-
+    
+    .main-container {
+        margin-top: 40rem;
+    }
      /* .person-bcard {
     top: 155px;     
   } */
@@ -1487,14 +1490,14 @@ p {
     }
 
     .divider {
-        top: 78rem;
+        top: 65rem;
     }
 
     .main-container {
         margin-top: 26rem;
     }
 
-    .h2 {
+    .h3 {
         margin-top: 7rem;
     }
 
@@ -1530,6 +1533,10 @@ p {
     margin-bottom: 28rem;
 }
 
+div.main-container {
+    margin-top: 25rem;
+
+}
 }
 
 
@@ -1538,8 +1545,8 @@ p {
     display: none;
  }
 
- .main-container {
-    margin-top: 20rem;
+ div.main-container {
+    margin-top: 25rem;
  }
 
  .divider {
@@ -1564,7 +1571,7 @@ p {
         grid-template-rows: auto auto auto auto auto;
         row-gap: 3.5rem;
         text-align: center;
-        padding: 8rem 2rem 0 2rem;
+        padding: 5rem 2rem 0 2rem;
     }
 
     .hero-h1 {
@@ -1584,12 +1591,9 @@ p {
         font-size: 1.5rem;
     }
 
-    .h2 {
-        margin-top: 3rem;
-    }
-
+    
     .main-container {
-        margin-top: 8rem;
+        margin-top: 20rem;
     }
 
     

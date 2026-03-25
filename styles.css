@@ -1531,6 +1531,10 @@ p {
     display: none;
  }
 
+ .main-container {
+    margin-top: 20rem;
+ }
+
 
     /* Add small-screen overrides here if needed */
 

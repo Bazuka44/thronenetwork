@@ -1231,7 +1231,13 @@ p {
 
     .animated-text {
         font-size: 3rem;
-}
+
+    
+    }
+
+    .welcome-section {
+        margin: 6em 0 3em 0;
+    }
 
 
 
@@ -1247,7 +1253,7 @@ p {
     } */
 
     .welcome-section {
-        margin: 3em 0 3em 0;
+        margin: 5em 0 3em 0;
     }
 
 
@@ -1281,9 +1287,9 @@ p {
         column-gap: 2rem;
    }
 
-   .welcome-section {
+   /* .welcome-section {
         margin: 3em 0 3em 0;
-    }
+    } */
 
 }
 
@@ -1297,15 +1303,17 @@ p {
             .card {
                 height: 45rem;
             }
-        }
 
-    .main-container {
+            .main-container {
         margin-top: 43rem;
     }
 
-    .welcome-section {
+    /* .welcome-section {
         margin: 3em 0 3em 0;
-    }
+    } */
+
+        }
+
 
 
 
@@ -1337,9 +1345,9 @@ p {
         margin-top: 31rem;
     } */
 
-     .welcome-section {
+     /* .welcome-section {
         margin: 3em 0 3em 0;
-    }
+    } */
 
     
 }
@@ -1464,9 +1472,9 @@ p {
         margin-top: 3rem;
     }
 
-     .welcome-section {
+     /* .welcome-section {
         margin: 3em 0 3em 0;
-    }
+    } */
 }
 
 @media (max-width: 630px) {
@@ -1543,9 +1551,9 @@ p {
         margin-top: 3rem;
     }
 
-     .welcome-section {
+     /* .welcome-section {
         margin: 3em 0 3em 0;
-    }
+    } */
 }
 
 
@@ -1664,8 +1672,8 @@ div.main-container {
         margin-top: 3rem;
     }
 
-    .welcome-section {
+    /* .welcome-section {
         margin: 3em 0 3em 0;
     }
-    
+     */
    }

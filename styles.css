@@ -1246,6 +1246,11 @@ p {
         
     } */
 
+    .welcome-section {
+        margin: 3em 0 3em 0;
+    }
+
+
   
 }
 
@@ -1275,6 +1280,11 @@ p {
    .hero-grid {
         column-gap: 2rem;
    }
+
+   .welcome-section {
+        margin: 3em 0 3em 0;
+    }
+
 }
 
 
@@ -1291,6 +1301,10 @@ p {
 
     .main-container {
         margin-top: 43rem;
+    }
+
+    .welcome-section {
+        margin: 3em 0 3em 0;
     }
 
 
@@ -1322,6 +1336,10 @@ p {
     /* .divider {
         margin-top: 31rem;
     } */
+
+     .welcome-section {
+        margin: 3em 0 3em 0;
+    }
 
     
 }
@@ -1445,6 +1463,10 @@ p {
         grid-row: 5/6;
         margin-top: 3rem;
     }
+
+     .welcome-section {
+        margin: 3em 0 3em 0;
+    }
 }
 
 @media (max-width: 630px) {
@@ -1497,9 +1519,9 @@ p {
         margin-top: 26rem;
     }
 
-    .h3 {
+    /* .h3 {
         margin-top: 7rem;
-    }
+    } */
 
      
 
@@ -1519,6 +1541,10 @@ p {
         grid-column: 1/2;
         grid-row: 5/6;
         margin-top: 3rem;
+    }
+
+     .welcome-section {
+        margin: 3em 0 3em 0;
     }
 }
 
@@ -1638,6 +1664,8 @@ div.main-container {
         margin-top: 3rem;
     }
 
-   
+    .welcome-section {
+        margin: 3em 0 3em 0;
+    }
     
    }
